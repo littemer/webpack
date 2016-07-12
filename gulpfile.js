@@ -16,9 +16,9 @@ gulp.task('default', function (done) {
 		stats: true
 	});
 
-	server.listen(9090, 'localhost', function (err) {
+	server.listen(8090, 'localhost', function (err) {
 		if (err) throw new gutil.PluginError('webpack-dev-server', err);
-		gutil.log('[webpack-dev-server]', 'http://localhost:9090/webpack-dev-server/');
+		gutil.log('[webpack-dev-server]', 'http://localhost:8090/webpack-dev-server/');
 		// keep the dev-server alive
 		done();
 	});
