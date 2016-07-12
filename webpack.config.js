@@ -19,9 +19,11 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
-				exclude: /(node_modules|bower_components)/,
-				loader: "babel-loader!jsx-loader?harmony"
+				test: /\.jsx$/,
+				exclude: /node_modules/,
+				//loader: "babel-loader!jsx-loader?harmony"
+				// 在这里添加 react-hot，注意这里使用的是loaders，所以不能用 query，应该把presets参数写在 babel 的后面
+				loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
 			}
 		]
 	},
@@ -31,8 +33,10 @@ module.exports = {
 	resolve: {
 		root: path.resolve(__dirname),
 		alias:{
-			page:path.join(srcDir,'pages')
+			page: path.join(srcDir,'pages'),
+			comp: path.join(srcDir,'components'),
+			comp2: path.join(srcDir,'pages/components')
 		},
-		extensions:['','.js','.jsx']
+		extensions:['','.js']
 	}
 };
