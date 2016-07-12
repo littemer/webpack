@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var HelloReact = require('./index');
+var HelloReact = require('comp2/index');
 
 function init() {
 
@@ -9,3 +9,5 @@ function init() {
 }
 
 init();
+
+// es 2016 语法
