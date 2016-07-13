@@ -1,17 +1,28 @@
 import  React  from 'react';
 
 class HelloReact extends React.Component {
-	// constructor(props){
-	// 	super(props);
-	// }
-	
-	// clickHandle(){
-	// 	alert('测试react');
-	// }
+	// ES 7
+	/*static propTypes = {
+		title: React.PropTypes.string.isRequired,
+		price: React.PropTypes.number.isRequired,
+		initialQty: React.PropTypes.number
+	};
+	static defaultProps = {
+		title: 'Undefined Product',
+		price: 100,
+		initialQty: 0
+	};*/
+
+	constructor(props){
+		super(props);
+	}
+	clickTest = () =>{
+		console.log(this);
+	}
 	render () {
 		return (
 				<div>
-					<button >hello React</button>
+					<button onClick={this.clickTest}>Hello React</button>
 				</div>
 		);
 	}

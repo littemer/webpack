@@ -7,7 +7,7 @@ var webpackConfig = require('./webpack.config.js');
 gulp.task('default', function (done) {
 	var compiler = webpack(webpackConfig);
 	var server = new WebpackDevServer(compiler, {
-		publicPath: '/build/',
+		publicPath: '/_build/', // 在webpackDevServer后 资源位置为/build/下，存放内存中
 		watchOptions: {
 			aggregateTimeout: 300,
 			poll: 1000
