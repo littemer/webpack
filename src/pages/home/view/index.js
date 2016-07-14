@@ -1,3 +1,5 @@
+"use strict";
+
 import  React  from 'react';
 
 class HelloReact extends React.Component {
@@ -17,6 +19,7 @@ class HelloReact extends React.Component {
 		super(props);
 	}
 	clickTest = () =>{
+		alert('测试React');
 		console.log(this);
 	}
 	render () {

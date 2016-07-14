@@ -1,4 +1,3 @@
-// es 2016 语法////
 "use strict";
 
 import React from 'react';

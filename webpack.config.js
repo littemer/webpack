@@ -6,7 +6,7 @@ var root = path.join(__dirname);
 var pagesDir = path.join(root, 'src/pages');
 var debug = true;
 /**
- * webpack�����ļ�
+ * webpack配置文件
  * @type {{entry: string[], output: {path: string, filename: string}, module: {loaders: *[]}}}
  */
 
